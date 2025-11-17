@@ -1,0 +1,17 @@
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
+public class Map {
+	public static void main(String[] args) {
+		HashMap hm = new HashMap();
+		hm.put("Company", "Manhatten");
+		hm.put("PL","java");
+		hm.put("city", "Bangalore");
+		LinkedHashMap<Integer, String> lhm= new LinkedHashMap();
+		//type got restricted to integer and string with the help of generics
+		lhm.put(1001, "Mudit");
+		lhm.put(1002, "Rahul");
+		lhm.put(1003, "vamis");
+		System.out.println(lhm);
+	}
+}

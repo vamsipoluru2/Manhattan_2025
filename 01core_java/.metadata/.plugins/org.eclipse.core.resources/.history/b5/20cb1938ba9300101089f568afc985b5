@@ -1,0 +1,28 @@
+import java.io.File;
+import java.io.IOException;
+
+public class ThrowsException {
+	
+	public static void main(String[] args) throws IOException{
+		// TODO Auto-generated method stub
+		File f=new File("E://myfile");
+		f.createNewFile();
+		
+		try {
+			File f1=new File("E.//myfile");
+			f1.createNewFile();
+			
+		}catch(IOException e) {
+			System.out.println("file is not found");
+		}
+
+	}
+}
+//	public static void main(String[] args)// throws ArthematicException {
+//		// TODO Auto-generated method stub
+//		try {//riskey code
+//		int a=10,b=0;
+//		
+//		System.out.println(a/b);
+//
+//}

@@ -1,0 +1,35 @@
+package Syncronization;
+
+
+class Dispaly {
+	public void trainingRoom(String trainerName,String PL) {
+		synchronized(this){
+			for(int i=1;i<10;i++) {
+				System.out.println("Hi,i am at sysncronized block"+"From trainer"+trainerName+"PL");
+				
+				try{
+					Thread.sleep(2000);
+					}catch(Exception e) {
+						e.printStackTrace();
+					}
+			}
+			
+		}
+		System.out.println("Out of the Synchronization Block");
+	}
+	
+}
+
+class MyThread extends Thread{
+	Display d=new Display();
+	
+	String trainName;
+	String PL;
+}
+
+public class SyncronizationEx {
+	public static void main(String[] args) {
+		
+	}
+
+}

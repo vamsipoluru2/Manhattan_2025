@@ -1,0 +1,16 @@
+class Varargs {
+
+    // method with varargs
+    static void showNames(String... names) {
+        System.out.println("Number of names: " + names.length);
+        for (String n : names) {
+            System.out.println(n);
+        }
+    }
+
+    public static void main(String[] args) {
+        showNames("Vamsi", "Rahul");
+        showNames("Mudit", "Ravi", "Sruthi", "Bhavya");
+        showNames(); // even zero arguments allowed
+    }
+}

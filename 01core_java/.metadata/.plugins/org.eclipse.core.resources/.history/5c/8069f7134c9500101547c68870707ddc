@@ -1,0 +1,14 @@
+class A{
+	class B{
+		void show() {
+			System.out.println("memberclass");
+		}
+	}
+}
+public class Innerclass {
+	public static void main(String[] args) {
+		A a=new A();
+		a.new B().show();
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Varargs.java&apos; to &apos;21LamdaExp&apos;&#x0D;&#x0A;- Original project: &apos;20VarArgs&apos;&#x0D;&#x0A;- Destination element: &apos;21LamdaExp&apos;&#x0D;&#x0A;- Original element: &apos;Varargs.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=21LamdaExp" element1="/src&lt;{Varargs.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1758697477223" units="1" version="1.0"/>
+</session>

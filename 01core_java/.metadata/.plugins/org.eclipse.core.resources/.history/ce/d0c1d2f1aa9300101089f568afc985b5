@@ -1,0 +1,5 @@
+
+public interface Interfacedemo2 {
+	public void show();
+
+}

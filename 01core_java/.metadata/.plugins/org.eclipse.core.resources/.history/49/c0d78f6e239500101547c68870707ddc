@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+ 
+public class ListIteratorEx {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList l= new ArrayList();
+		l.add(10);
+		l.add(22.6);
+		l.add("Hello");
+		Student s = null;
+		String s1 = "Stru";
+		l.add(s);
+		l.add(s1);
+	
+		
+		  ListIterator i = l.listIterator();
+		  while(i.hasNext())
+		  { System.out.println(i.next());
+		  }
+		  System.out.println("===============");
+		  i.set(100);
+		  while(i.hasPrevious()) {
+			  System.out.println(i.previous());
+		  }
+		
+	}
+ 
+}

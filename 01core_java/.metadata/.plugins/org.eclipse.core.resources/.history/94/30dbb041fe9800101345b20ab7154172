@@ -1,0 +1,78 @@
+//import java.util.function.Predicate;
+//
+//public class PredicateEx {
+//	static int i=5;
+//	public static void main(String[] args) {
+//		Predicate p=(i)->(i % 2==0);
+//		if(p.test(5)) {
+//			System.out.println("Even Number");
+//		}else {
+//			System.out.println("old Number");
+//		}
+//
+//}
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
+class Student2 {
+    private int rollNo;
+    private String name;
+    private int marks;
+
+    Student2(int rollNo, String name, int marks) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public int getRollNo() {
+        return rollNo;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class PredicateEx {
+    public static void main(String[] args) {
+        List<Student2> students = Arrays.asList(
+                new Student2(1001, "Vamsi", 94),
+                new Student2(1002, "Rahul", 99),
+                new Student2(1003, "Kiran", 40),
+                new Student2(1004, "Anil", 55)
+        );
+
+        // Predicate: condition to check pass/fail
+        Predicate<Student2> isPassed = s -> s.getMarks() >= 45;
+
+        // Function: convert Student2 -> String grade message
+        Function<Student2, String> grading = s -> {
+            if (s.getMarks() >= 85) return s.getName() + " got A Grade (" + s.getMarks() + ")";
+            else if (s.getMarks() >= 60) return s.getName() + " got B Grade (" + s.getMarks() + ")";
+            else if (s.getMarks() >= 45) return s.getName() + " got C Grade (" + s.getMarks() + ")";
+            else return s.getName() + " Failed (" + s.getMarks() + ")";
+        };
+
+        // Consumer: printing result
+        Consumer<String> printer = System.out::println;
+
+        // ✅ Filter + Map + ForEach
+        System.out.println("---- Passed Students ----");
+        students.stream()
+                .filter(isPassed)      // keep only passed
+                .map(grading)          // map to grade message
+                .forEach(printer);     // print
+
+        System.out.println("---- Failed Students ----");
+        students.stream()
+                .filter(isPassed.negate()) // keep only failed
+                .map(grading)
+                .forEach(printer);
+    }
+}

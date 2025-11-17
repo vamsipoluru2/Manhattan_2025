@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Student{
+	
+}
+public class ArrayListEx {
+	public static void main(String[] args) {
+		ArrayList l=new ArrayList<>();//if we specify the generics it is typesafe
+		l.add(20);
+		l.add(2.6);
+		l.add("Hello");
+		Student s=null;
+		
+		l.add(s);
+		System.out.println(l);
+	}
+}

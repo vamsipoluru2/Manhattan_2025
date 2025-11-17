@@ -1,0 +1,11 @@
+
+public class Vehicle {
+	private int vNo;
+	private String Vname;
+	
+	public Vehicle(int vNo,String VName) {
+		this.Vname=VName;
+		this.vNo=vNo;
+	}
+	
+}

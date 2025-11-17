@@ -1,0 +1,6 @@
+interface StudentInt{
+	Studnet get
+}
+public class ConstructorEx {
+
+}

@@ -1,0 +1,39 @@
+import java.util.Comparator;
+import java.util.TreeSet;
+
+public class TreeSetEx {
+	
+	
+
+	
+	
+	public static void main(String[] args) {
+		
+	     Comparator<Integer> descOrder = new Comparator<Integer>() {
+	            
+	            public int compare(Integer o1, Integer o2) {
+	                return o2.compareTo(o1); 
+	                }
+	            
+	        };
+		TreeSet<Integer> t=new TreeSet(descOrder);
+		t.add(10);
+//		t.add("Hello");//diff type of obj is not allowed
+		t.add(5);
+	    t.add(20);
+	    t.add(15);
+
+	        System.out.println(t);
+
+	        System.out.println("First element: " + t.first());
+	        System.out.println("Last element: " + t.last());
+	        System.out.println("HeadSet (<15): " + t.headSet(15));
+	        System.out.println("TailSet (>=15): " + t.tailSet(15));
+	        System.out.println("SubSet (5-20): " + t.subSet(4, 20));
+	        System.out.println(t);
+	}
+	
+	
+	
+	
+}

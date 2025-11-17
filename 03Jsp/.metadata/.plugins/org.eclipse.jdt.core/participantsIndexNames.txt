@@ -1,0 +1,7 @@
+INDEX VERSION 1.134
+C:\manhatten_learnings\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2072460075.index
+\01ScriptingTag\src\main\java
+C:\manhatten_learnings\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1951131278.index
+\02DirectivesTag\src\main\java
+C:\manhatten_learnings\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1864729032.index
+\02DirectivesTag\src\main\java

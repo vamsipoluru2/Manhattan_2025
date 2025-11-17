@@ -1,0 +1,15 @@
+
+public class Method1CateEx {
+	int sum(int a,int b) {
+		return a+b;
+	}
+	public static void main(String[] args){
+		// TODO Auto-generated method stub
+		
+		Method1CateEx ob=new Method1CateEx();
+		int c=ob.sum(10, 20);
+		System.out.println(c);
+		System.out.println(ob.sum(100,50));
+	}
+
+}

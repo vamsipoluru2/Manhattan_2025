@@ -1,0 +1,11 @@
+package InterThreading;
+
+public class InterthreadEx {
+	class MyThread1 extends Thread{
+		public void run() {
+			System.out.println("child thread is updating..");
+			
+		}
+	}
+
+}

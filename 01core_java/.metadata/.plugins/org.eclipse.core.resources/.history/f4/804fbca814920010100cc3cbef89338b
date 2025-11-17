@@ -1,0 +1,22 @@
+
+public class MyFirstJavaProgram {
+
+	public static void main(String[] args) {
+		System.out.println("hi");
+		int id;
+//		System.out.println(id);
+		student s1=new student();
+		System.out.println(s1.a);
+		s1.a=1001;
+		System.out.println(s1.a);
+		
+		
+	}
+
+	
+}
+
+	class student {
+		int a;
+
+	}

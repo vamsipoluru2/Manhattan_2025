@@ -1,0 +1,39 @@
+public class StringBufferr{
+    public static void main(String[] args) {
+        // Create a StringBuffer
+        StringBuffer sb = new StringBuffer("Hello");
+        
+        StringBuffer sb2=new StringBuffer(" chitti");
+
+        // append()
+        sb.append(" World");
+        System.out.println("After append: " + sb);   // Hello World
+        
+        sb.append(sb2);
+        System.out.println("after append: " + sb);//modified to existing obj
+        
+
+        //capacity()
+        System.out.println("Capacity: " + sb.capacity());
+
+        //length()
+        System.out.println("Length: " + sb.length());
+
+        // insert()
+        sb.insert(6, "Java ");
+        System.out.println("After insert: " + sb);   // Hello Java World
+
+        // replace()
+        sb.replace(6, 10, "C++");  // (start, end, new text)
+        System.out.println("After replace: " + sb); // Hello C++ World
+
+        // delete()
+        sb.delete(6, 10);
+        System.out.println("After delete: " + sb);  // Hello  World
+
+        // reverse()
+        sb.reverse();
+        System.out.println("After reverse: " + sb); // dlroW  olleH
+
+    }
+}

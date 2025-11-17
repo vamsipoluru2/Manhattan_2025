@@ -1,0 +1,25 @@
+
+
+class parent1{
+	void show() {
+		System.out.println("parent class");
+	}
+}
+
+class parent2{
+	void display() {
+		System.out.println("child");
+	}
+}
+
+class child1 {
+	
+}
+public class MultipleInheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

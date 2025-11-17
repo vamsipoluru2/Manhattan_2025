@@ -1,0 +1,23 @@
+
+public class UnCheckedException {
+	public static void main(String[] args) {
+		
+		
+	try {
+	int a=Integer.parseInt(args[0]);
+	int b=Integer.parseInt(args[1]);
+	System.out.println(a+b);
+	}catch(NumberFormatException n){
+		System.out.println("only Num are allowed");
+	}
+	
+	// if string contains number as a string  it converts do not throw exception// "123"
+	//if string contains a name as a string it do not converts and throw an exception"a b"
+	
+	
+	
+	}
+	
+	
+
+}

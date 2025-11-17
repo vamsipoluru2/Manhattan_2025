@@ -1,0 +1,17 @@
+import java.util.LinkedList;
+
+public class LinkedListEx {
+	public static void main(String[] args) {
+		LinkedList l1=new LinkedList();
+		l1.add(20);
+		l1.add(30);// this method in collection framework
+		System.out.println(l1);
+		l1.add(1,40);//this method only in LL
+		System.out.println(l1);
+		l1.addFirst(50);
+		System.out.println(l1);
+		l1.addLast(30);
+		System.out.println(l1);
+	}
+
+}

@@ -1,0 +1,29 @@
+
+public class StaticVariableEx2 {
+	int a=10;
+	static int b=10;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		int b=30;
+//		System.out.println(b);
+		
+		
+		StaticVariableEx2 s1=new StaticVariableEx2();
+		
+		StaticVariableEx2 s2=new StaticVariableEx2();
+		s1.a=s1.a+5;
+		
+		s1.b=s1.b+3;
+		
+		
+		System.out.println(s1.a);//15
+		System.out.println(s1.b);//13
+		System.out.println(s2.a);//10
+		System.out.println(s2.b);//13
+		s2.b=s2.b+3;//changing via s2
+		System.out.println(b);//16
+		
+
+	}
+
+}

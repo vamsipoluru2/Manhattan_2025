@@ -1,0 +1,27 @@
+import java.util.function.Function;
+
+public class FunctionsEx {
+    public static void main(String[] args) {
+        
+        // Function: Integer -> Square of Integer
+        Function<Integer, Integer> square = n -> n * n;
+
+        // Function: String -> Length of String
+        Function<String, Integer> length = str -> str.length();
+
+        // Function: String -> Uppercase String
+        Function<String, String> toUpper = str -> str.toUpperCase();
+
+        // Using apply()
+        System.out.println("Square of 5: " + square.apply(5));
+        System.out.println("Length of 'Hello': " + length.apply("Hello"));
+        System.out.println("Uppercase of 'java': " + toUpper.apply("java"));
+
+        // Function chaining: andThen()
+        Function<Integer, Integer> doubleIt = n -> n * 2;
+        System.out.println("Square then double (5): " + square.andThen(doubleIt).apply(5));
+
+        // Function chaining: compose()
+        System.out.println("Double then square (5): " + square.compose(doubleIt).apply(5));
+    }
+}

@@ -1,0 +1,9 @@
+
+class A{
+	public void thisISMyMethodOverriding{
+		
+	}
+}
+public class lamdaExpEx {
+	
+}

@@ -1,0 +1,14 @@
+package com.manhatten.java11;
+public class StringMethodsEx {
+    public static void main(String[] args) {
+        String str = "  hello  ";
+
+        System.out.println(str.isBlank());       // false
+        System.out.println("   ".isBlank());     // true
+        System.out.println("hi\nhello".lines().count()); // 2
+        System.out.println("ha".repeat(3));      // hahaha
+        System.out.println(str.strip());         // "hello"
+        System.out.println(str.stripLeading());  // "hello  "
+        System.out.println(str.stripTrailing()); // "  hello"
+    }
+}

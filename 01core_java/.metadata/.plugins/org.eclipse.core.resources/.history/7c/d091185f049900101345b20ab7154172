@@ -1,0 +1,10 @@
+import java.util.List;
+
+public class VarInLambda {
+    public static void main(String[] args) {
+        List<String> names = List.of("Vamsi", "Rahul", "Kiran");
+
+        // Java 11: var inside lambda
+        names.forEach((var name) -> System.out.println(name.toUpperCase()));
+    }
+}

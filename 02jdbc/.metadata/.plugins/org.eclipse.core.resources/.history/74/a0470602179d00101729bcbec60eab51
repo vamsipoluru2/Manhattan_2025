@@ -1,0 +1,55 @@
+package JDBC.TransactionManagementEx;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class TranxMngmntex {
+	
+	public static void main(String[] args) {
+		Connection con=null;
+		Statement stmt=null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			//step establish connection
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/amrita","root","Root");
+			//step 3
+			con.setAutoCommit(false);
+			stmt=con.createStatement();
+			
+			
+			 stmt.executeUpdate("INSERT INTO sports VALUES (888, 'headset')");
+			 stmt.executeUpdate("update sports set name='keyword' where s_id=555");
+			stmt.executeUpdate("delete from sports where s_id=103");
+			con.commit();
+			System.out.println("trans sucess!..");
+			
+			
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			try {
+				System.out.println("trans failed!...  ");
+				con.rollback();
+			}catch(SQLException e1) {
+				e1.printStackTrace();
+				
+			}
+			
+		}
+		
+		
+	
+		finally {
+			try {
+				con.close();
+				stmt.close();
+			}catch(SQLException e1) {
+				System.out.println("transfailed !...");
+			}
+		}
+	}
+}

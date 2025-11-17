@@ -1,0 +1,25 @@
+package com.UncheckedException;
+
+class UserDefinedException extends RuntimeException{
+	public UserDefinedException(String s) {
+		System.out.println(s);
+	}
+	
+	class Cube{
+		void cube(int a) {
+			if(a>0) {
+			System.out.println(a*a*a);
+			}
+			
+			else {
+				throw new UserDefinedException("Negative numbers are not allowed:");
+			}
+		}
+	}
+}
+	
+	public class UserDefinedException {
+	public static void main(String[] args) {
+		
+	}
+}

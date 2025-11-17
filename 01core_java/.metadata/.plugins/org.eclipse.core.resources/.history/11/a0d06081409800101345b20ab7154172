@@ -1,0 +1,8 @@
+
+
+public interface MyInterfaceEx {
+	public static void main(String[] args) {
+		System.out.println("hi i am from Interface");
+	}
+
+}

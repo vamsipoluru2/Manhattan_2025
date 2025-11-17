@@ -1,0 +1,22 @@
+
+public class MethodOverLoading {
+
+	int sum(int a,int b) {
+		 int c=a+b;
+		 return c;
+	}
+	
+	int sum(int a,int b, int c) {
+		int d=a+b+c;
+		return d;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MethodOverLoading ob=new MethodOverLoading();
+		System.out.println(ob.sum(2,3));
+		
+		System.out.println(ob.sum(2, 3, 4));
+
+	}
+
+}

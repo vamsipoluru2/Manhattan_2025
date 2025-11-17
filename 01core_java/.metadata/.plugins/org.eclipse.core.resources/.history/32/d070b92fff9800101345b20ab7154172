@@ -1,0 +1,62 @@
+package com.manhatten.java8;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class StreamEx {
+
+	public static void main(String[] args) {
+//		List<Integer> l = new ArrayList<Integer>();
+//		for(int i=1;i<=10;i++) {
+//			l.add(i);
+//		}
+//		System.out.println(l);
+		
+		//FILTER
+//		List<Integer> l1 = l.stream().filter(i->(i%2==0)).collect(Collectors.toList());
+//		
+////		Stream s= l.stream();
+////		List<Integer> l2 = ((Stream<Integer>) s).filter(i->(i%2==0)).collect(Collectors.toList());
+//		System.out.println(l1);
+		
+		//MAP 
+//		List l1=l.stream().map(i->i*5).collect(Collectors.toList());
+//		System.out.println(l1);
+		
+		
+		//COUNT
+//		List<String> l = new ArrayList<String>();
+//		l.add("Book");
+//		l.add("Bottle");
+//		l.add("Pen");
+//		l.add("Paper");
+//		long count = l.stream().filter(i->(i.length()<5)).count();
+//		System.out.println("Less than 5 letters we have "+count +" objects in List");
+		
+		//SORT
+//		List<Integer> l = new ArrayList<Integer>();
+//		l.add(80);
+//		l.add(10);
+//		l.add(50);
+//		l.add(20);
+//		l.add(90);
+//		System.out.println(l);
+//		List<Integer> l1 = l.stream().sorted().collect(Collectors.toList());
+//		System.out.println(l1);
+////		
+//		List<Integer> l2 = l.stream().sorted((i1,i2)->(i2.compareTo(i1))).collect(Collectors.toList());
+//		System.out.println(l2);
+//		
+//		//TOARRAY
+//		Integer ir[] = l1.stream().map(i->(i-5)).toArray(Integer[]::new);
+//		for(int a:ir)
+//			System.out.println(a);
+		
+		//OF AND FOREACH
+		Stream s = Stream.of(10, 20, 30, 40, 50);
+		s.forEach(System.out::println);
+//		s.forEach(i->System.out.println(i));
+	}
+
+}

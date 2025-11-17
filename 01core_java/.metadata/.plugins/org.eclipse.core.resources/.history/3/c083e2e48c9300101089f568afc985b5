@@ -1,0 +1,30 @@
+
+public class Strings {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="hello";
+		String s1=new String("hello");
+		String s2=new String("hello");
+		String s3="hello";
+		
+		System.out.println(s==s3);
+		System.out.println(s1==s2);
+		
+		System.out.println(s1.equals(s2));
+		
+		char ch[]= {'w','e','l','c','o'};
+		
+		for(char c:ch) {
+			System.out.println(c);
+		}
+		String d=new String(ch);
+		System.out.println(d);
+		
+		String d1=new String(ch,2,4);
+		System.out.println(d1);
+		
+		//
+	}
+
+}

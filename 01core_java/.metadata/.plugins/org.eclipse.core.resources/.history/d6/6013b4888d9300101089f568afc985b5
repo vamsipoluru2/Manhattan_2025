@@ -1,0 +1,91 @@
+
+public class Strings {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="hello";
+		String s1=new String("hello");
+		String s2=new String("hello");
+		String s3="hello";
+		
+		System.out.println(s==s3);
+		System.out.println(s1==s2);
+		
+		System.out.println(s1.equals(s2));
+		
+		char ch[]= {'w','e','l','c','o'};
+		
+		for(char c:ch) {
+			System.out.println(c);
+		}
+		String d=new String(ch);
+		System.out.println(d);
+		
+		String d1=new String(ch,2,3);
+		System.out.println(d1);
+		
+		//methods
+		String c2 = new String("welcome");
+		// Length
+        System.out.println("Length: " + c2.length());
+
+        // charAt
+        System.out.println("CharAt(3): " + c2.charAt(3));
+
+        // equals
+        System.out.println("Equals 'welcome': " + c2.equals("welcome"));
+        System.out.println("EqualsIgnoreCase 'WELCOME': " + c2.equalsIgnoreCase("WELCOME"));
+
+        // compareTo
+        System.out.println("CompareTo 'apple': " + c2.compareTo("apple"));
+
+        // toUpperCase & toLowerCase
+        System.out.println("Upper: " + c2.toUpperCase());
+        System.out.println("Lower: " + c2.toLowerCase());
+
+        // substring
+        System.out.println("Substring(3): " + c2.substring(3));
+        System.out.println("Substring(1,4): " + c2.substring(1,4));
+
+        // contains
+        System.out.println("Contains 'come': " + c2.contains("come"));
+
+        // startsWith & endsWith
+        System.out.println("StartsWith 'wel': " + c2.startsWith("wel"));
+        System.out.println("EndsWith 'me': " + c2.endsWith("me"));
+
+        // indexOf & lastIndexOf
+        System.out.println("IndexOf 'c': " + c2.indexOf('c'));
+        System.out.println("LastIndexOf 'e': " + c2.lastIndexOf('e'));
+
+        // replace
+        System.out.println("Replace 'e' with 'x': " + c2.replace('e','x'));
+
+        // trim (to show effect, add spaces)
+        String spaced = "   welcome   ";
+        System.out.println("Trim: '" + spaced.trim() + "'");
+
+        // split
+        String demo = "wel-come-to-java";
+        String[] parts = demo.split("-");
+        for(String p : parts) {
+            System.out.println("Split part: " + p);
+        }
+
+        // isEmpty
+        String empty = "";
+        System.out.println("isEmpty (c2): " + c2.isEmpty());
+        System.out.println("isEmpty (empty): " + empty.isEmpty());
+
+        // toCharArray
+        char[] arr = c2.toCharArray();
+        for(char ch : arr) {
+            System.out.print(ch + " ");
+        }
+        System.out.println();
+
+        // concat
+        System.out.println("Concat: " + c2.concat(" user"));
+	}
+
+}

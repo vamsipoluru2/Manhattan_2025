@@ -1,0 +1,23 @@
+class Sum{
+	void sum() {
+		for(int i=1;i<=10;i++) {
+			int c=0;
+			c+=i;
+			System.out.println("Thread -"+c);
+		}
+		System.out.println(Thread.currentThread());
+	}
+}
+public class MethodReferenceEx {
+	public static void main(String[] args) {
+		Sum s=new Sum();
+		Runnable r=s::sum;
+		Thread th=new Thread(r);
+		th.start();
+		
+		for(int i=1;i<10;i++) {
+			System.out.println("main :"+i);
+		}
+		
+	}
+}

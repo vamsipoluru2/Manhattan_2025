@@ -1,0 +1,19 @@
+interface StudentInt{
+	Student get(String s);
+}
+
+class Student{
+	String s;
+	public Student(String s) {
+		System.out.println("constructor Ref :"+s);
+	}
+	
+}
+
+
+public class ConstructorEx {
+	public static void main(String[] args) {
+	StudentInt s=Student::new;
+	s.get("Ajay");
+	}
+}

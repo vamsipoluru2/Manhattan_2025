@@ -1,0 +1,11 @@
+class MyInterfaceIm implements Interfacedemo{
+	public void show() {
+		System.out.println("iam vamsi");
+	}
+	
+}
+public class MyInterfaceImpl{
+	public static void main(String[] args) {
+		
+	}
+}

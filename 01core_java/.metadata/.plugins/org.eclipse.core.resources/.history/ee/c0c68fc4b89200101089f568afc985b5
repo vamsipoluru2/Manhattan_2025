@@ -1,0 +1,14 @@
+
+public class Method1CateEx {
+	int sum(int a,int b) {
+		return a+b;
+	}
+	private void psvm() {
+		// TODO Auto-generated method stub
+		
+		Method1CateEx ob=new Method1CateEx();
+		int c=ob.sum(10, 20);
+		System.out.println(c);
+	}
+
+}

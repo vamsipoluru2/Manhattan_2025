@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.UncheckedException.NegativeNumberException&apos; to &apos;UserDefinedException&apos;&#x0D;&#x0A;- Original project: &apos;16ExceptionHandling&apos;&#x0D;&#x0A;- Original element: &apos;com.UncheckedException.NegativeNumberException&apos;&#x0D;&#x0A;- Renamed element: &apos;com.UncheckedException.UserDefinedException&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NegativeNumberException&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.UncheckedException{NegativeNumberException.java[NegativeNumberException" matchStrategy="1" name="UserDefinedException" qualified="false" references="true" similarDeclarations="false" stamp="1758169399743" textual="false" version="1.0"/>
+</session>

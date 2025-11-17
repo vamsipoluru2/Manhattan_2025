@@ -1,0 +1,27 @@
+class Engine{
+	int engineNo;
+	
+	int getEngineNo(int eNo) {
+		engineNo=eNo;
+		return engineNo;
+	}
+	
+}
+class Car{
+	int Nowheels;
+	String color;
+	Engine e;
+	int showCarDetails() {
+		System.out.println(NoWheels);
+		System.out.println(color);
+	}
+	
+}
+public class HasARelationship {
+
+	public static void main(String[] args) {
+		Car c=new Car();
+
+	}
+
+}

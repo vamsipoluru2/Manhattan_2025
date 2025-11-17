@@ -1,0 +1,13 @@
+class MyInterfaceIm implements Interfacedemo,Interfacedemo2{
+	public void show() {
+		System.out.println("i am vamsi");
+		System.out.println("a= "+a);
+	}
+	
+}
+public class MyInterfaceImpl{
+	public static void main(String[] args) {
+//		MyInterfaceIm demo=new MyInterfaceIm();
+//		demo.show();
+	}
+}

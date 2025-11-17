@@ -1,0 +1,56 @@
+//define a student class, you have to print their grades
+/* * { register number, name, grades, marks} */
+//whilst using functional interface
+
+import java.util.HashMap;
+
+@FunctionalInterface
+interface Grader {
+    String grade(String name);
+}
+
+class Student1 {
+    private int rollNo;
+    private String name;
+    private int marks;
+
+    Student1(int rollNo, String name, int marks) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class Assignment2 {
+    public static void main(String[] args) {
+        HashMap<String, Integer> students = new HashMap<>();
+
+        Student1 s1 = new Student1(1001, "Vamsi", 94);
+        Student1 s2 = new Student1(1002, "rahul", 99);
+
+        students.put(s1.getName(), s1.getMarks());
+        students.put(s2.getName(), s2.getMarks());
+
+
+        Grader grader = (name) -> {
+            int marks = students.get(name);
+            if (marks >= 45) {
+                return "Student passed! Congratulations " + name +
+                        "! You have successfully cleared with " + marks + " marks";
+            } else {
+                return name + " did not pass.";
+            }
+        };
+
+        System.out.println(grader.grade("vamsi"));
+        System.out.println(grader.grade("rahul"));
+    }
+}

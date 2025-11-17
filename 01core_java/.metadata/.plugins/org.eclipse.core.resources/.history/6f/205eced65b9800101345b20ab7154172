@@ -1,0 +1,18 @@
+interface StudentInt{
+	Student getStudent(Student s);
+}
+
+class Student{
+	
+}
+class StudentDemo{
+	public Student get(Student s) {
+		return new Student();
+	}
+}
+public class ConstructorEx {
+	public static void main(String[] args) {
+		StudentDemo sd=new StudentDemo();
+		StudentInt s=StudentDemo::new;
+	}
+}

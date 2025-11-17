@@ -1,0 +1,34 @@
+
+class Student{
+	int id;
+	String name;
+	void showStudentDetails() {
+		System.out.println("Id "+id);
+		System.out.println("name " +name);
+	}
+	
+	Student(){
+		
+		
+	}
+	
+	
+	Student(int id,String name){
+		this.id=id;
+		this.name=name;
+		
+	}
+}
+public class DefaultConstructor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student ob=new Student();
+		ob.showStudentDetails();
+		
+		Student ob2=new Student(20,"mudit");
+		ob2.showStudentDetails();
+		
+	}
+
+}
