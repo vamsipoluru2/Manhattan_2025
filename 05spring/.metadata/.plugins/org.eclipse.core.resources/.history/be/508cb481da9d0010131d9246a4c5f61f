@@ -1,0 +1,8 @@
+
+public class Student {
+	private int EmpId;
+	private String name;
+	private double salary;
+	
+
+}

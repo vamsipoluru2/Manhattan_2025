@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="com.manhattan.bean.Libary" name="Library"><!--obj creation -->
+    <property name="books">
+	    <list>
+		    <value>Java Basics</value>
+		    <value>Spring Basics</value>
+		    <value>Sql basics</value>
+		    <value>jdbc Basics</value>
+	    </list>
+    </property>
+      
+      <!--  Cannot contain duplicates.-->
+    <property name="bookIds">
+	    <set>
+		    <value>1001</value>
+		    <value>1002</value>
+		    <value>1003</value>
+		    <value>1004</value>
+	    </set>
+    </property>
+     
+     
+      <!--   Keys are unique..--> 
+    <property name="priceMap">
+	    <map>
+		    <entry key="Java Basics" value="100000"></entry>
+		    <entry key="Spring Basics" value="200000"></entry>
+		    <entry key="Sql basics" value="300000"></entry>
+		    <entry key="jdbc Basics" value="400000"></entry>
+	    </map>
+    </property>
+      
+  
+        
+        
+    </bean>
+    
+  
+    
+</beans>
+

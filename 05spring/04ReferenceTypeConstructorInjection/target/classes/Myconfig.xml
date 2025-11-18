@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="com.manhatten.bean.Employee" name="eobj"><!--obj creation -->
+    <constructor-arg name="id" value="201"></constructor-arg>
+    <constructor-arg name="name" value="vamsi"></constructor-arg>
+    <constructor-arg name="salary" value ="300000"></constructor-arg>
+    <constructor-arg name="a"> <ref bean="Aobj"></ref></constructor-arg>
+  
+    </bean>
+     
+    <bean class="com.manhatten.bean.Address" name="Aobj"><!--obj creation -->
+     <constructor-arg name="dNo" value="35"></constructor-arg>
+    <constructor-arg name="area" value="nellore"></constructor-arg>
+    <constructor-arg name="city" value ="andhra"></constructor-arg>
+    
+        
+    </bean>
+    
+  
+    
+</beans>
+

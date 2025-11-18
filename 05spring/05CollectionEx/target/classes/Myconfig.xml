@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="com.manhatten.bean.Product" name="eobj"><!--obj creation -->
+    <property name="pName">
+	    <list>
+		    <value>Mobile</value>
+		    <value>laptop</value>
+		    <value>desktop</value>
+		    <value>Tab</value>
+	    </list>
+    </property>
+      
+      <!--  Cannot contain duplicates.-->
+    <property name="pId">
+	    <set>
+		    <value>1001</value>
+		    <value>1002</value>
+		    <value>1003</value>
+		    <value>1004</value>
+	    </set>
+    </property>
+     
+     
+      <!--   Keys are unique..--> 
+    <property name="prod">
+	    <map>
+		    <entry key="Apple" value="100000"></entry>
+		    <entry key="samsung" value="200000"></entry>
+		    <entry key="Pixel" value="300000"></entry>
+		    <entry key="oneplus" value="400000"></entry>
+	    </map>
+    </property>
+      
+      <!--Keys and values are strings only.stores as string --> 
+      <property name="p">
+	      <props>
+		      <prop key="watch">20000></prop>
+		      <prop key="sunGlasses">30000></prop>
+		      <prop key="TV">40000></prop>
+	      </props>
+      </property>
+        
+        
+    </bean>
+    
+  
+    
+</beans>
+

@@ -1,0 +1,29 @@
+package com.manhatten.bean;                                                                 
+                                                                                            
+public class Students {                                                                      
+	private int regNo;                                                                      
+	private String name;                                                                    
+	private double fee;                                                                     
+	                                                                                        
+                                                                                                                                                                          
+                                                                                            
+                                                                                            
+                                                                                            
+	public Students(int regNo, String name, double fee) {
+		super();
+		this.regNo = regNo;
+		this.name = name;
+		this.fee = fee;
+	}
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "Students [regNo=" + regNo + ", name=" + name + ", fee=" + fee + "]";
+	}
+                                                                                        
+}                                                                                           
+                                                                                            

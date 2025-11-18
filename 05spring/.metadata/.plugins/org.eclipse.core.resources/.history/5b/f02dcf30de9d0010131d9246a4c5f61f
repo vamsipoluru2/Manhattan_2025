@@ -1,0 +1,40 @@
+package com.manhatten.bean;
+
+public class Student {
+	private int RegNo;
+	private String Name;
+	private double Fee;
+	
+
+	
+
+
+	public Student(int regNo, String name, double fee) {
+		super();
+		RegNo = regNo;
+		Name = name;
+		Fee = fee;
+	}
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "Student [RegNo=" + RegNo + ", Name=" + Name + ", Fee=" + Fee + "]";
+	}
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+
+}

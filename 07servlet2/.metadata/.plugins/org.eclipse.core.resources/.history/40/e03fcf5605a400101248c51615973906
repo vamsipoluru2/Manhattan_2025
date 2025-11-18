@@ -1,0 +1,20 @@
+package com.manhattan;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+/**
+ * Servlet implementation class LoginEx
+ */
+@WebServlet("/LoginURL")
+public class LoginEx extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public LoginEx() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

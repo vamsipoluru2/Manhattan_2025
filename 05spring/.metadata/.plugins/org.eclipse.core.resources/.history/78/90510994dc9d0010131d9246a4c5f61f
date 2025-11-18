@@ -1,0 +1,17 @@
+package com.manhatten.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.manhatten.bean.Student;
+
+public class Main {
+	public static void main(String[] args) {
+		
+	//container creation
+	ApplicationContext context =new ClassPathXmlApplicationContext("MyConfig.xml");
+	
+	Student s1=context.getBean("stud1",Student.class);
+	System.out.println(s1);
+	}
+}
