@@ -1,0 +1,68 @@
+import java.util.*;
+import java.util.stream.*;
+//define a student class, you have to print their grades /* * 
+//{ register number, name , marks} */ 
+//whilst using functional interface using filter and map
+
+// Functional interface
+@FunctionalInterface
+interface Grader {
+    String grade(Student2 s);
+}
+
+class Student2 {
+    private int rollNo;
+    private String name;
+    private int marks;
+
+    Student2(int rollNo, String name, int marks) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public int getRollNo() {
+        return rollNo;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class Assignment3 {
+    public static void main(String[] args) {
+        List<Student2> students = Arrays.asList(
+                new Student2(1001, "Vamsi", 94),
+                new Student2(1002, "Rahul", 99),
+                new Student2(1003, "Kiran", 40),
+                new Student2(1004, "Anil", 55)
+        );
+
+
+        Grader grader = (student) -> {
+            if (student.getMarks() >= 45) {
+                return student.getName() + " passed with " + student.getMarks();
+            } else {
+                return student.getName() + " failed with " + student.getMarks();
+            }
+        };
+
+     
+        students.stream()
+                .filter(s -> s.getMarks() >= 45) // only pass students
+                .map(grader::grade)              // apply our functional interface
+                .forEach(System.out::println);
+
+        System.out.println(" Failed Students ");
+
+        students.stream()
+                .filter(s -> s.getMarks() < 45) // only fail students
+                .map(grader::grade)
+                .forEach(System.out::println);
+    }
+}
