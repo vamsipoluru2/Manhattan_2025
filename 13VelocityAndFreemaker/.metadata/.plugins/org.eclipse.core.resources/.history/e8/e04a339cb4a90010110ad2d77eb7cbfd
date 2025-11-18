@@ -1,0 +1,12 @@
+package com.manhattan;
+
+import javax.servlet.http.HttpServlet;
+
+/**
+ * Servlet implementation class HelloServlet
+ */
+@WebServlet("/HelloServletUrl")
+public class HelloServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+}

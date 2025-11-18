@@ -1,0 +1,14 @@
+spring.application.name=CART-SERVICE-CONFIG-ACTUATOR
+
+server.port = 9098
+
+spring.config.import=optional:configserver:http//localhost:9095
+
+management.endpoints.web.exposure.include = *
+
+management.info.env.enabled = true
+
+info.my.app.title = Cart-ServiceWithConfig
+info.my.app.version = 1.0.1
+
+management.endpoint.env.show-values = ALWAYS

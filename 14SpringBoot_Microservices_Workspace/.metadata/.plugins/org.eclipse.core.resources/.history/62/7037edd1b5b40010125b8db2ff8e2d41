@@ -1,0 +1,15 @@
+spring.application.name=ORDER-SERVICE-CONFIG-SERVER
+
+server.port = 9098
+
+spring.config.import=optional:configserver:http//localhost:9095
+
+management.endpoint.web.exposure.include = *
+
+management.info.env.enabled = true
+
+info.my.app.title = Cart-ServiceWithConfig
+info.my.app.version = 1.0.1
+
+management.endpoint.env.show-values = ALWAYS
+

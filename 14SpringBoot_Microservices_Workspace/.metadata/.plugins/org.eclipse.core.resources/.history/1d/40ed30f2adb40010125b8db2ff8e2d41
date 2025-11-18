@@ -1,0 +1,8 @@
+spring.application.name=07_SpringCloudConfigServer
+
+server.port = 9095
+
+spring.cloud.server.git.uri = https://github.com/Shahid-1102/ConfigApp.git
+spring.cloud.server.git.username = Shahid-1102
+spring.cloud.server.git.password = github@1102
+spring.cloud.server.git.default = main

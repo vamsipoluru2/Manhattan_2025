@@ -1,0 +1,14 @@
+spring.application.name=CART-SERVICE-CONFIG-ACTUATOR
+
+server.port = 9100
+
+spring.config.import=optional:configserver:http//localhost:9095
+
+management.endpoints.web.exposure.include = *
+
+management.info.env.enabled = true
+
+spring.boot.client.url=http://localhost:9099
+
+spring.boot.admin.client.instance.service-base-url=http://localhost:9100
+spring.boot.admin.client.instance.service-management-url=http://localhost:9100

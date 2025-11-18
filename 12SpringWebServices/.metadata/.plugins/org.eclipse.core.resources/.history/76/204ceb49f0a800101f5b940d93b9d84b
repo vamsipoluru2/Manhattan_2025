@@ -1,0 +1,20 @@
+package com.manhattan.rest;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.manhattan.model.Book;
+
+@RestController
+@RequestMapping("/v2/app/book")
+public class BookController {
+	
+	@GetMapping("/fetch")
+	public ResponseEntity<Book> fecthBook(){
+		Book b=new  Book(101,"java",350)
+		return null;
+		
+	}
+}

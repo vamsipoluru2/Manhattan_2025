@@ -1,0 +1,5 @@
+spring.application.name=ORDER-SERVICE-CONFIG-SERVER
+
+server.port = 9097
+
+spring.config.import=optional:configserver:http//localhost:9095
