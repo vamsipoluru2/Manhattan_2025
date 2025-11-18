@@ -1,0 +1,51 @@
+<p>workshops-list works!</p>
+
+<!-- ✅ Show Loader while loading -->
+<div *ngIf="loading">
+  <app-loader-spinner></app-loader-spinner>
+</div>
+
+<!-- ✅ Show Error when not loading but error exists -->
+<div *ngIf="!loading && error">
+  <app-error-alert [err]="error" [loading]="loading"></app-error-alert>
+</div>
+
+<!-- ✅ Show Workshops when loaded successfully -->
+<div class="container mt-4" *ngIf="!loading && workshops && workshops.length">
+  <app-pagination 
+    [page]="page"
+    (pageChange)="changePage($event)">
+  </app-pagination>
+
+  <input
+    type="search"
+    class="form-control"
+    placeholder="Type to search by name"
+    [(ngModel)]="filterKey"
+    (input)="filterWorkshops()"
+/>
+
+
+
+@if ( filterKey !== '' ) {
+    <div>
+        Workshops whose name has
+        <span class="text-primary">{{ filterKey }}</span> are shown.
+    </div>
+}
+
+  <div class="row justify-content-center">
+   @for (workshop of filteredWorkshops; track workshop.id) {
+      <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex justify-content-center">
+        <app-items [workshop]="workshop"></app-items>
+      </div>
+    }
+  </div>
+</div>
+
+<!-- ✅ Optional: Show message if no workshops -->
+<div *ngIf="!loading && workshops && !workshops.length">
+  <div class="text-center text-muted mt-4">
+    No workshops found.
+  </div>
+</div>

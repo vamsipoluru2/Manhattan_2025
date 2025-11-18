@@ -1,0 +1,24 @@
+<div    class="container my-4">  
+    <ngb-alert [dismissible]="true">//for custome bootstrap feature to close 
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </ngb-alert>
+
+  <h1>{{ title }}</h1>
+  <hr />
+
+   <button (click)="changeTitle('My Awesome App')">Change title</button>
+  
+  
+    <div class="container mt">
+  </div>
+
+</div>
+
+    <app-toast></app-toast>
+    <app-menu></app-menu>
+
+  <div    class="container my-4">
+  <!-- <app-home></app-home> -->
+  <router-outlet></router-outlet>
+   
+</div>
