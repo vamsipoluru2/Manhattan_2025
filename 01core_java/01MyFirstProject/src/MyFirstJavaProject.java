@@ -2,7 +2,7 @@
 
 public class MyFirstJavaProject {
 		
-		static int b=10;
+		static int b=100;
 		
 		public static void main(String[] args) {
 			System.out.println("Welcome to Manhatten");
